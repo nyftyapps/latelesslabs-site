@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | LateLess Labs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
+        /* Typography styles for the legal content */
+        .prose-container {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #fff;
         }
-        h1 {
+        .prose-container h1 {
             font-size: 2.2rem;
             color: #000;
             margin-bottom: 0.5rem;
+            font-weight: bold;
         }
-        h2 {
+        .prose-container h2 {
             font-size: 1.5rem;
-            color: #2563eb; /* Updated to match your blue branding */
+            color: #2563eb;
             margin-top: 2rem;
             border-bottom: 1px solid #eee;
             padding-bottom: 8px;
+            font-weight: bold;
         }
-        p {
+        .prose-container p {
             margin-bottom: 1.2rem;
         }
         .last-updated {
@@ -34,79 +34,84 @@
             font-style: italic;
             margin-bottom: 2rem;
         }
-        ul {
+        .prose-container ul {
             margin-bottom: 1.2rem;
+            list-style-type: disc;
+            padding-left: 1.5rem;
         }
-        li {
+        .prose-container li {
             margin-bottom: 0.8rem;
         }
-        strong {
+        .prose-container strong {
             color: #000;
-        }
-        footer {
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid #eee;
-            font-size: 0.85rem;
-            color: #888;
-            text-align: center;
-        }
-        a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
 
-    <h1>Privacy Policy</h1>
-    <p class="last-updated">Last Updated: April 17, 2026</p>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-bold text-xl tracking-tight text-blue-600">LateLess Labs</a>
+            <div class="space-x-6 text-sm font-medium">
+                <a href="support.html" class="hover:text-blue-600 transition">Support</a>
+                <a href="privacy.html" class="text-blue-600 font-bold">Privacy</a>
+                <a href="terms.html" class="hover:text-blue-600 transition">Terms</a>
+            </div>
+        </div>
+    </nav>
 
-    <section>
-        <h2>1. Introduction</h2>
-        <p><strong>LateLess Labs LLC</strong> respects your privacy. We built the <strong>LateLess</strong> app with a strict "privacy-first, on-device" philosophy. This policy explains how your data is handled.</p>
-    </section>
+    <main class="flex-grow max-w-3xl mx-auto px-6 py-12 bg-white shadow-sm my-8 rounded-lg border border-gray-100 prose-container w-full">
+        
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: April 17, 2026</p>
 
-    <section>
-        <h2>2. We Do Not Collect Your Data</h2>
-        <p>LateLess does not collect, store, or transmit any of your personal data to our servers. We do not have user accounts, we do not have a backend database, and we do not use third-party analytics trackers to monitor your behavior. Everything you do inside LateLess stays on your iPhone.</p>
-    </section>
+        <section>
+            <h2>1. Introduction</h2>
+            <p><strong>LateLess Labs LLC</strong> respects your privacy. We built the <strong>LateLess</strong> app with a strict "privacy-first, on-device" philosophy. This policy explains how your data is handled.</p>
+        </section>
 
-    <section>
-        <h2>3. How We Use Device Permissions (Strictly On-Device)</h2>
-        <p>To provide its core functionality, LateLess requests access to certain native iOS features. This data never leaves your device:</p>
-        <ul>
-            <li><strong>Apple Calendar (EventKit):</strong> LateLess requests Calendar access to read your upcoming events and write your custom "Prep Time" blocks directly to your schedule. We do not read your calendar data on our servers or share it with anyone.</li>
-            <li><strong>Location Services (CoreLocation):</strong> If you enable the "Travel Time" feature, LateLess requests your location to calculate accurate driving ETAs using Apple Maps. This calculation happens entirely on your device. We do not track you, and we do not keep a history of your locations.</li>
-            <li><strong>Text-to-Speech (AVSpeechSynthesizer):</strong> Our audio coaching relies on Apple’s native on-device voices. Your routine names and steps are never sent to a cloud server to be processed.</li>
-        </ul>
-    </section>
+        <section>
+            <h2>2. We Do Not Collect Your Data</h2>
+            <p>LateLess does not collect, store, or transmit any of your personal data to our servers. We do not have user accounts, we do not have a backend database, and we do not use third-party analytics trackers to monitor your behavior. Everything you do inside LateLess stays on your iPhone.</p>
+        </section>
 
-    <section>
-        <h2>4. Data Storage & Deletion</h2>
-        <p>Because all data (including your custom TimeFlows, routines, and settings) is saved locally on your device via Apple's standard storage (UserDefaults), you have complete control over it.</p>
-        <ul>
-            <li>To delete your routines, simply use the "Erase All Data" button in the LateLess Settings menu.</li>
-            <li>To permanently delete everything, simply uninstall the LateLess app from your device.</li>
-        </ul>
-    </section>
+        <section>
+            <h2>3. How We Use Device Permissions (Strictly On-Device)</h2>
+            <p>To provide its core functionality, LateLess requests access to certain native iOS features. This data never leaves your device:</p>
+            <ul>
+                <li><strong>Apple Calendar (EventKit):</strong> LateLess requests Calendar access to read your upcoming events and write your custom "Prep Time" blocks directly to your schedule. We do not read your calendar data on our servers or share it with anyone.</li>
+                <li><strong>Location Services (CoreLocation):</strong> If you enable the "Travel Time" feature, LateLess requests your location to calculate accurate driving ETAs using Apple Maps. This calculation happens entirely on your device. We do not track you, and we do not keep a history of your locations.</li>
+                <li><strong>Text-to-Speech (AVSpeechSynthesizer):</strong> Our audio coaching relies on Apple’s native on-device voices. Your routine names and steps are never sent to a cloud server to be processed.</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>5. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy or how LateLess handles your data, please contact us at:</p>
-        <p>
-            <strong>LateLess Labs LLC</strong><br>
-            971 US Highway 202N, #6351<br>
-            Branchburg, NJ 08876<br>
-            Email: <a href="mailto:support@latelesslabs.com">support@latelesslabs.com</a>
-        </p>
-    </section>
+        <section>
+            <h2>4. Data Storage & Deletion</h2>
+            <p>Because all data (including your custom TimeFlows, routines, and settings) is saved locally on your device via Apple's standard storage (UserDefaults), you have complete control over it.</p>
+            <ul>
+                <li>To delete your routines, simply use the "Erase All Data" button in the LateLess Settings menu.</li>
+                <li>To permanently delete everything, simply uninstall the LateLess app from your device.</li>
+            </ul>
+        </section>
 
-    <footer>
-        <p>&copy; 2026 LateLess Labs LLC. All Rights Reserved.</p>
+        <section>
+            <h2>5. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy or how LateLess handles your data, please contact us at:</p>
+            <p>
+                <strong>LateLess Labs LLC</strong><br>
+                971 US Highway 202N, #6351<br>
+                Branchburg, NJ 08876<br>
+                Email: <a href="mailto:support@latelesslabs.com" class="text-blue-600 hover:underline">support@latelesslabs.com</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center text-sm mt-auto">
+        <div class="max-w-5xl mx-auto px-4">
+            <p class="mb-2">&copy; 2026 LateLess Labs LLC. All Rights Reserved.</p>
+            <p class="text-xs uppercase tracking-widest opacity-60">971 US Highway 202N, #6351, Branchburg, NJ 08876</p>
+        </div>
     </footer>
 
 </body>
