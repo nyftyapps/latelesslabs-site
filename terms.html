@@ -1,59 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service | LateLess Labs</title>
+    <title>Terms of Service — LateLess Labs</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font for modern, clean typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-[#FAFAFA] text-[#1A1A1A] antialiased selection:bg-indigo-100 flex flex-col min-h-screen">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="font-bold text-xl tracking-tight text-blue-600">LateLess Labs</a>
-            <div class="space-x-6 text-sm font-medium">
-                <a href="support.html" class="hover:text-blue-600 transition">Support</a>
-                <a href="privacy.html" class="hover:text-blue-600 transition">Privacy</a>
-                <a href="terms.html" class="text-blue-600 font-bold">Terms</a>
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-gray-100/80">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <!-- Links back to the main index.html -->
+                <a href="index.html" class="text-xl font-bold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-indigo-600 to-violet-600 hover:opacity-80 transition">LateLess Labs</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-500">
+                <a href="index.html#features" class="hover:text-indigo-600 transition">How it Works</a>
+                <a href="index.html#pricing" class="hover:text-indigo-600 transition">Pricing</a>
             </div>
         </div>
     </nav>
 
-    <main class="flex-grow max-w-3xl mx-auto px-4 py-12 w-full">
-        <section class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 prose prose-blue max-w-none">
-            <h1 class="text-3xl font-bold mb-2 text-gray-900">Terms of Service</h1>
-            <p class="text-sm text-gray-500 mb-8 border-b pb-4">Last Updated: April 17, 2026</p>
+    <!-- Legal Document Content -->
+    <main class="flex-grow py-16 px-6">
+        <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-[32px] border border-gray-200/60 shadow-xl shadow-gray-100/50">
+            
+            <header class="mb-10 border-b border-gray-100 pb-8">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-2">Terms of Service</h1>
+                <p class="text-sm text-gray-500 font-medium">Last Updated: April 17, 2026</p>
+            </header>
 
-            <h2 class="text-xl font-bold mt-6 mb-2 text-gray-900">1. Acceptance of Terms</h2>
-            <p class="mb-4 text-gray-600">By downloading or using LateLess (the "App"), provided by <strong>LateLess Labs LLC</strong> ("we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree, do not use the App.</p>
+            <div class="space-y-8 text-gray-600 text-sm md:text-base leading-relaxed">
+                
+                <!-- Section 1 -->
+                <section>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">1. Acceptance of Terms</h2>
+                    <p>By downloading or using LateLess (the "App"), provided by LateLess Labs LLC ("we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree, do not use the App.</p>
+                </section>
 
-            <h2 class="text-xl font-bold mt-6 mb-2 text-gray-900">2. Description of Service</h2>
-            <p class="mb-4 text-gray-600">LateLess is a productivity tool designed to assist individuals with time management and time blindness. The App is provided on an "as-is" and "as-available" basis.</p>
+                <!-- Section 2 -->
+                <section>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">2. Description of Service & Disclaimers</h2>
+                    <p class="mb-3">LateLess is a productivity tool designed to assist individuals with time management and routine pacing. The App is provided on an "as-is" and "as-available" basis.</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li><strong class="font-semibold text-gray-800">Medical Disclaimer:</strong> LateLess is an administrative productivity tool. It is not a medical device, nor is it intended to diagnose, treat, cure, or prevent any medical condition, including ADHD.</li>
+                        <li><strong class="font-semibold text-gray-800">Transit & Accuracy Disclaimer:</strong> LateLess utilizes third-party location and calendar data (such as Apple Maps and EventKit) to estimate travel durations and trigger notifications. We do not guarantee the accuracy, reliability, or timeliness of these estimations, routing data, or alerts.</li>
+                    </ul>
+                </section>
 
-            <h2 class="text-xl font-bold mt-6 mb-2 text-gray-900">3. Subscriptions and Payments</h2>
-            <p class="mb-4 text-gray-600">If you purchase a subscription, billing is handled via the Apple App Store. You may cancel your subscription at any time through your device's store settings. All refund requests must be directed to Apple.</p>
+                <!-- Section 3 -->
+                <section>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">3. Subscriptions and Payments</h2>
+                    <p class="mb-3">LateLess offers premium features via auto-renewing subscriptions (e.g., LateLess Pro).</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li>Payment will be charged to your Apple ID account at the confirmation of purchase.</li>
+                        <li>Your subscription automatically renews unless it is canceled at least 24 hours before the end of the current billing period.</li>
+                        <li>Your account will be charged for renewal within 24 hours prior to the end of the current period.</li>
+                        <li>You can manage and cancel your subscriptions by going to your App Store Account Settings after purchase.</li>
+                        <li>All billing, cancellations, and refund requests are handled exclusively by Apple.</li>
+                    </ul>
+                </section>
 
-            <h2 class="text-xl font-bold mt-6 mb-2 text-gray-900">4. Discontinuation of Service</h2>
-            <p class="mb-4 text-gray-600">We reserve the right to modify or discontinue the App. In the event of a permanent discontinuation, we will provide at least 30 days' notice. We are not liable for any loss of data or convenience. Pro-rated refunds for active subscriptions will be handled according to the App Store’s standard policies.</p>
+                <!-- Section 4 -->
+                <section>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">4. Discontinuation of Service</h2>
+                    <p>We reserve the right to modify or discontinue the App. In the event of a permanent discontinuation, we will provide at least 30 days' notice. We are not liable for any loss of data or convenience. Pro-rated refunds for active subscriptions will be handled according to the App Store’s standard policies.</p>
+                </section>
 
-            <h2 class="text-xl font-bold mt-6 mb-2 text-gray-900">5. Limitation of Liability</h2>
-            <p class="mb-4 text-gray-600">To the maximum extent permitted by law, <strong>LateLess Labs LLC</strong> shall not be liable for any indirect, incidental, or consequential damages resulting from your use or inability to use the App.</p>
+                <!-- Section 5 -->
+                <section>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">5. Limitation of Liability</h2>
+                    <p>To the maximum extent permitted by law, LateLess Labs LLC shall not be liable for any indirect, incidental, special, or consequential damages resulting from your use or inability to use the App. <strong class="font-semibold text-gray-900">This includes, but is not limited to, damages for loss of wages, missed flights, missed professional or personal appointments, transit delays, or any other real-world consequences resulting from reliance on the App’s notifications or travel estimations.</strong></p>
+                </section>
 
-            <h2 class="text-xl font-bold mt-6 mb-2 text-gray-900">6. Governing Law</h2>
-            <p class="mb-4 text-gray-600">These terms are governed by the laws of the State of New Jersey, without regard to its conflict of law principles.</p>
+                <!-- Section 6 -->
+                <section>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">6. Governing Law</h2>
+                    <p>These terms are governed by the laws of the State of New Jersey, without regard to its conflict of law principles.</p>
+                </section>
 
-            <h2 class="text-xl font-bold mt-6 mb-2 text-gray-900">7. Dispute Resolution and Binding Arbitration</h2>
-            <p class="mb-2 text-gray-600"><strong>A. Mandatory Arbitration:</strong> You and <strong>LateLess Labs LLC</strong> agree that any dispute or claim arising out of these Terms will be settled by binding arbitration, rather than in court.</p>
-            <p class="mb-2 text-gray-600"><strong>B. Class Action Waiver:</strong> You and <strong>LateLess Labs LLC</strong> agree that each may bring claims against the other only in your individual capacity, and not as a plaintiff or class member in any purported class or representative proceeding.</p>
-            <p class="mb-2 text-gray-600"><strong>C. Small Claims Court:</strong> Either party may bring an individual action in small claims court in Somerset County, New Jersey, if the claim qualifies.</p>
-            <p class="mb-4 text-gray-600"><strong>D. Severability:</strong> If any provision of these Terms is found to be unenforceable, that provision shall be limited so that these Terms shall otherwise remain in full force and effect.</p>
-        </section>
+                <!-- Section 7 -->
+                <section>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">7. Dispute Resolution and Binding Arbitration</h2>
+                    <ul class="space-y-3 text-gray-600">
+                        <li><strong class="font-semibold text-gray-800">A. Mandatory Arbitration:</strong> You and LateLess Labs LLC agree that any dispute or claim arising out of these Terms will be settled by binding arbitration, rather than in court.</li>
+                        <li><strong class="font-semibold text-gray-800">B. Class Action Waiver:</strong> You and LateLess Labs LLC agree that each may bring claims against the other only in your individual capacity, and not as a plaintiff or class member in any purported class or representative proceeding.</li>
+                        <li><strong class="font-semibold text-gray-800">C. Small Claims Court:</strong> Either party may bring an individual action in small claims court in Somerset County, New Jersey, if the claim qualifies.</li>
+                        <li><strong class="font-semibold text-gray-800">D. Severability:</strong> If any provision of these Terms is found to be unenforceable, that provision shall be limited so that these Terms shall otherwise remain in full force and effect.</li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
     </main>
 
-    <footer class="bg-gray-900 text-gray-400 py-12 text-center text-sm mt-auto">
-        <div class="max-w-5xl mx-auto px-4">
-            <p class="mb-2">&copy; 2026 LateLess Labs LLC. All Rights Reserved.</p>
-            <p class="text-xs uppercase tracking-widest opacity-60">971 US Highway 202N, #6351, Branchburg, NJ 08876</p>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-12 text-xs text-gray-400 mt-auto">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="max-w-xl">
+                <p class="font-medium text-gray-500 mb-2">&copy; 2026 LateLess Labs LLC. All rights reserved.</p>
+                <p class="mb-2">Notification voice coaching generated via premium synthesizers.</p>
+                <p class="text-gray-400/80 italic">Disclaimer: LateLess is a supportive tool to help manage ADHD symptoms and time blindness; it is not a medical cure.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="Privacy.html" class="hover:text-gray-600 transition">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-gray-600 transition">Terms of Service</a>
+                <a href="support.html" class="hover:text-gray-600 transition">Support</a>
+            </div>
         </div>
     </footer>
 
