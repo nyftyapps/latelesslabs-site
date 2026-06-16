@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2=family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
         .ambient-blur {
@@ -74,4 +74,99 @@
     <section id="pricing" class="py-24 bg-[#FAFAFA] border-t border-gray-100">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-9
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">Simple, transparent pricing</h2>
+                <p class="text-lg text-gray-600">Invest in your time security. All plans start with an obligation-free 14-day trial.</p>
+                
+                <div class="inline-flex items-center bg-gray-100 p-1 rounded-full mt-8">
+                    <button id="btn-monthly" onclick="setBilling('monthly')" class="px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 bg-white text-gray-900 shadow-sm">Monthly</button>
+                    <button id="btn-annual" onclick="setBilling('annual')" class="px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 text-gray-500 hover:text-gray-900">Annual (Save 50%)</button>
+                </div>
+            </div>
+
+            <div class="max-w-md mx-auto bg-white border border-gray-200 rounded-3xl p-8 relative shadow-xl shadow-gray-100/30">
+                <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-indigo-600 text-white shadow-sm">
+                    Most Popular
+                </div>
+                <div class="text-center mb-6">
+                    <h3 class="text-xl font-bold text-gray-900">LateLess Pro</h3>
+                    <p class="text-gray-500 text-xs mt-1">Full access to systemic executive function tools</p>
+                    <div class="mt-4 flex items-baseline justify-center">
+                        <span class="text-gray-900 text-5xl font-extrabold tracking-tight">$</span>
+                        <span id="price-value" class="text-gray-900 text-5xl font-extrabold tracking-tight">7.99</span>
+                        <span id="price-period" class="text-gray-500 text-sm font-medium ml-1">/mo</span>
+                    </div>
+                    <p id="billing-subtitle" class="text-indigo-600 text-xs font-medium mt-2 h-4">Billed monthly, cancel anytime</p>
+                </div>
+
+                <ul class="space-y-4 text-sm text-gray-600 mb-8 border-t border-gray-100 pt-6">
+                    <li class="flex items-center"><svg class="w-4 h-4 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> Unlimited Task Blocks &amp; Routines</li>
+                    <li class="flex items-center"><svg class="w-4 h-4 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> Apple Calendar &amp; Transit Synchronization</li>
+                    <li class="flex items-center"><svg class="w-4 h-4 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> Premium Audio Coaching Updates</li>
+                    <li class="flex items-center"><svg class="w-4 h-4 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> Complete On-Device Data Isolation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-gray-100 py-12 text-xs text-gray-400">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="max-w-xl">
+                <p class="font-medium text-gray-500 mb-2">&copy; 2026 LateLess Labs LLC. All rights reserved.</p>
+                <p class="mb-2">Notification voice coaching generated via premium synthesizers.</p>
+                <p class="text-gray-400/80 italic">Disclaimer: LateLess is a supportive tool to help manage executive function and time blindness; it is not a medical cure.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="Privacy.html" class="hover:text-gray-600 transition">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-gray-600 transition">Terms of Service</a>
+                <a href="support.html" class="hover:text-gray-600 transition">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hero Carousel Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.carousel-slide');
+            let currentSlide = 0;
+
+            if (slides.length > 0) {
+                setInterval(() => {
+                    // Fade out current slide
+                    slides[currentSlide].classList.remove('opacity-100', 'z-20');
+                    slides[currentSlide].classList.add('opacity-0', 'z-10');
+                    
+                    // Move to next slide index
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    
+                    // Fade in new slide
+                    slides[currentSlide].classList.remove('opacity-0', 'z-10');
+                    slides[currentSlide].classList.add('opacity-100', 'z-20');
+                }, 3500); // Changes image every 3.5 seconds
+            }
+        });
+
+        // Pricing Toggle Logic
+        function setBilling(type) {
+            const btnMonthly = document.getElementById('btn-monthly');
+            const btnAnnual = document.getElementById('btn-annual');
+            const priceValue = document.getElementById('price-value');
+            const pricePeriod = document.getElementById('price-period');
+            const billingSubtitle = document.getElementById('billing-subtitle');
+
+            if (type === 'annual') {
+                btnAnnual.className = "px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 bg-white text-gray-900 shadow-sm";
+                btnMonthly.className = "px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 text-gray-500 hover:text-gray-900";
+                priceValue.innerText = "49.99";
+                pricePeriod.innerText = "/yr";
+                billingSubtitle.innerText = "Equivalent to just $4.16/month";
+            } else {
+                btnMonthly.className = "px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 bg-white text-gray-900 shadow-sm";
+                btnAnnual.className = "px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 text-gray-500 hover:text-gray-900";
+                priceValue.innerText = "7.99";
+                pricePeriod.innerText = "/mo";
+                billingSubtitle.innerText = "Billed monthly, cancel anytime";
+            }
+        }
+    </script>
+</body>
+</html>
