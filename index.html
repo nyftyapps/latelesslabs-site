@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LateLess Labs — Beat Time Blindness</title>
+    <title>LateLess — Beat Time Blindness</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,9 @@
     <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-gray-100/80">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-2">
-                <span class="text-xl font-bold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-indigo-600 to-violet-600">LateLess Labs</span>
+                <span class="text-2xl sm:text-3xl font-bold tracking-tight" style="font-family: 'SF Pro Rounded', ui-rounded, 'SF Compact Rounded', system-ui, sans-serif;">
+                    <span class="text-blue-950">Late</span><span class="text-[#34C759]">Less</span>
+                </span>
             </div>
             <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-500">
                 <a href="#pricing" class="hover:text-indigo-600 transition">Pricing</a>
@@ -34,7 +36,7 @@
             
             <div class="lg:col-span-7 text-left">
                 <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 border border-indigo-100/50 mb-6">
-                    Accountability Over Forgiveness
+                    Built by Neurodivergent Minds, For Neurodivergent Minds
                 </span>
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 leading-[1.1] mb-6">
                     Master your momentum.<br>
@@ -49,7 +51,7 @@
                         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-[48px] w-auto">
                     </a>
                     <div class="text-xs text-gray-400 max-w-[200px] sm:mt-1">
-                        Requires iOS 16.0 or later. Built natively in Swift.
+                        Requires iOS 18.0 or later. Built natively in Swift.
                     </div>
                 </div>
             </div>
@@ -74,22 +76,22 @@
     <section id="pricing" class="py-24 bg-[#FAFAFA] border-t border-gray-100">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">Simple, transparent pricing</h2>
-                <p class="text-lg text-gray-600">Invest in your time security. All plans start with an obligation-free 14-day trial.</p>
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">Pricing</h2>
+                <p class="text-lg text-gray-600">Invest in your time security. Annual plan starts with an obligation-free 14 day trial.</p>
                 
                 <div class="inline-flex items-center bg-gray-100 p-1 rounded-full mt-8">
-                    <button id="btn-monthly" onclick="setBilling('monthly')" class="px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 bg-white text-gray-900 shadow-sm">Monthly</button>
-                    <button id="btn-annual" onclick="setBilling('annual')" class="px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 text-gray-500 hover:text-gray-900">Annual (Save 50%)</button>
+                    <button type="button" id="btn-monthly" onclick="setBilling('monthly')" class="px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 bg-white text-gray-900 shadow-sm cursor-pointer">Monthly</button>
+                    <button type="button" id="btn-annual" onclick="setBilling('annual')" class="px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 text-gray-500 hover:text-gray-900 cursor-pointer">Annual (Save 48%)</button>
                 </div>
             </div>
 
             <div class="max-w-md mx-auto bg-white border border-gray-200 rounded-3xl p-8 relative shadow-xl shadow-gray-100/30">
-                <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-indigo-600 text-white shadow-sm">
+                <div id="most-popular-badge" class="hidden absolute -top-3.5 left-1/2 transform -translate-x-1/2 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-indigo-600 text-white shadow-sm">
                     Most Popular
                 </div>
                 <div class="text-center mb-6">
                     <h3 class="text-xl font-bold text-gray-900">LateLess Pro</h3>
-                    <p class="text-gray-500 text-xs mt-1">Full access to systemic executive function tools</p>
+                    <p class="text-gray-500 text-xs mt-1">Accountability Over Forgiveness</p>
                     <div class="mt-4 flex items-baseline justify-center">
                         <span class="text-gray-900 text-5xl font-extrabold tracking-tight">$</span>
                         <span id="price-value" class="text-gray-900 text-5xl font-extrabold tracking-tight">7.99</span>
@@ -146,27 +148,30 @@
         });
 
         // Pricing Toggle Logic
-        function setBilling(type) {
+        window.setBilling = function(type) {
             const btnMonthly = document.getElementById('btn-monthly');
             const btnAnnual = document.getElementById('btn-annual');
             const priceValue = document.getElementById('price-value');
             const pricePeriod = document.getElementById('price-period');
             const billingSubtitle = document.getElementById('billing-subtitle');
+            const popularBadge = document.getElementById('most-popular-badge');
 
             if (type === 'annual') {
-                btnAnnual.className = "px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 bg-white text-gray-900 shadow-sm";
-                btnMonthly.className = "px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 text-gray-500 hover:text-gray-900";
+                btnAnnual.className = "px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 bg-white text-gray-900 shadow-sm cursor-pointer";
+                btnMonthly.className = "px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 text-gray-500 hover:text-gray-900 cursor-pointer";
                 priceValue.innerText = "49.99";
                 pricePeriod.innerText = "/yr";
                 billingSubtitle.innerText = "Equivalent to just $4.16/month";
+                popularBadge.classList.remove('hidden');
             } else {
-                btnMonthly.className = "px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 bg-white text-gray-900 shadow-sm";
-                btnAnnual.className = "px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 text-gray-500 hover:text-gray-900";
+                btnMonthly.className = "px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 bg-white text-gray-900 shadow-sm cursor-pointer";
+                btnAnnual.className = "px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 text-gray-500 hover:text-gray-900 cursor-pointer";
                 priceValue.innerText = "7.99";
                 pricePeriod.innerText = "/mo";
                 billingSubtitle.innerText = "Billed monthly, cancel anytime";
+                popularBadge.classList.add('hidden');
             }
-        }
+        };
     </script>
 </body>
 </html>
